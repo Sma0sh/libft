@@ -6,7 +6,7 @@
 /*   By: diteixei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 16:37:49 by diteixei          #+#    #+#             */
-/*   Updated: 2023/10/11 16:42:18 by diteixei         ###   ########.fr       */
+/*   Updated: 2023/10/14 12:58:09 by diteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,21 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	ft_putchar_fd((char)n, fd);
+	if (n == -2147483648)
+		write(fd, "-2147483648", 11);
+	else
+	{
+		if (n < 0)
+		{
+			ft_putchar_fd('-', fd);
+			n = -n;
+		}
+		while (n > 9)
+		{
+			ft_putnbr_fd(n / 10, fd);
+			n = n % 10;
+		}
+		if (n <= 9)
+			ft_putchar_fd(n + '0', fd);
+	}
 }
