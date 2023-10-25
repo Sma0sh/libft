@@ -6,7 +6,7 @@
 #    By: diteixei <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/04 10:04:45 by diteixei          #+#    #+#              #
-#    Updated: 2023/10/19 16:06:32 by diteixei         ###   ########.fr        #
+#    Updated: 2023/10/24 12:07:44 by diteixei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ SRCS	= \
 
 BSRCS	= \
 	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c  ft_lstlast.c ft_lstadd_back.c \
-	ft_lstdelone.c ft_lstclear.c
+	ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
 OBJS	= $(SRCS:.c=.o)
 BOBJS	= $(BSRCS:.c=.o)

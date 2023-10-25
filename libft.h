@@ -6,7 +6,7 @@
 /*   By: diteixei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 10:12:04 by diteixei          #+#    #+#             */
-/*   Updated: 2023/10/19 16:05:54 by diteixei         ###   ########.fr       */
+/*   Updated: 2023/10/24 12:07:26 by diteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,10 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstadd_front(t_list **lst, t_list *new);
 void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstnew(void *content);
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 //put
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putchar_fd(char c, int fd);

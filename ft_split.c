@@ -6,7 +6,7 @@
 /*   By: diteixei <diteixei@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 16:51:48 by diteixei          #+#    #+#             */
-/*   Updated: 2023/10/19 10:35:04 by diteixei         ###   ########.fr       */
+/*   Updated: 2023/10/24 12:06:21 by diteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,11 +66,8 @@ static int	ft_wordcount(char const *s, char c)
 
 static char	**ft_free(char **tab, int k)
 {
-	while (k != 0)
-	{
+	while (k--)
 		free(tab[k]);
-		k++;
-	}
 	free(tab);
 	return (0);
 }
