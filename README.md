@@ -1,2 +1,2 @@
 # libft
-42- 00 Project libft
+42 - 00 Project libft
